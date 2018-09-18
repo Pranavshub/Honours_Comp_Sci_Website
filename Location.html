@@ -11,11 +11,10 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700" rel="stylesheet">
         <link href="assets/css/bootstrap.css" rel="stylesheet">
         <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="assets/css/flexslider.css" rel="stylesheet">
         <link href="assets/css/docs.css" rel="stylesheet">
         <link href="assets/css/prettyPhoto.css" rel="stylesheet">
         <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-        <link href="assets/css/flexslider.css" rel="stylesheet">
-        <link href="assets/css/sequence.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/color/default.css" rel="stylesheet">
 
@@ -32,9 +31,30 @@
           Author: BootstrapMade.com
           Author URL: https://bootstrapmade.com
         ======================================================= -->
+        <style>
+            table {
+                margin-top: 20px;
+                border-collapse: collapse;
+                margin-bottom: 50px;
+                float: right;
+                width: 49%;
+            }
+
+            .type1 {
+                color: #f05658;
+                font-size: 70pt;
+                padding-right: 20px;
+                padding-bottom: 80px;
+            }
+
+            .type2 {
+                vertical-align: top;
+                font-size: 20pt;
+            }
+        </style>
     </head>
 
-    <body>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
         <header>
             <!-- Navbar
             ================================================== -->
@@ -42,30 +62,31 @@
                 <div class="navbar-inner">
                     <div class="container">
                         <!-- logo -->
-                        <a class="brand logo" href="index.html"><img src="assets/img/logo_copy.png" alt=""></a>
+                        <a class="brand logo" href="index.html">
+                            <img src="assets/img/logo_copy.png" alt="" />
+                        </a>
                         <!-- end logo -->
                         <!-- top menu -->
                         <div class="navigation">
                             <nav>
                                 <ul class="nav topnav">
-                                    <li class="dropdown active">
+                                    <li class="dropdown">
                                         <a href="Home.html">Home</a>
                                     </li>
-                                    <li class="dropdown">
+                                    <li class="dropdown active">
                                         <a href="#">Information</a>
                                         <ul class="dropdown-menu">
                                             <li><a href="about.html">About us</a></li>
                                             <li><a href="YearLongSchedule.html">Year Long Schedule</a></li>
                                             <li><a href="Location.html">Location</a></li>
                                             <li><a href="Image-Gallery.html">Image Gallery</a></li>
-
                                         </ul>
                                     </li>
                                     <li class="dropdown">
                                         <a href="#">Student Information</a>
                                         <ul class="dropdown-menu">
                                             <li><a href="roster.html">Roster</a></li>
-                                            <li><a href="login.html">Login</a></li>
+                                            <li><a href="login.php">Login</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -76,66 +97,32 @@
                 </div>
             </div>
         </header>
-        <section id="intro">
-            <div class="jumbotron masthead">
+        <!-- Subhead
+      ================================================== -->
+        <section id="subintro">
+            <div class="jumbotron subhead" id="overview">
                 <div class="container">
-                    <!-- slider navigation -->
-                    <div class="sequence-nav">
-                        <div class="prev">
-                            <span></span>
-                        </div>
-                        <div class="next">
-                            <span></span>
-                        </div>
-                    </div>
-                    <!-- end slider navigation -->
                     <div class="row">
                         <div class="span12">
-                            <div id="slider_holder">
-                                <div id="sequence">
-                                    <ul>
-                                        <!-- Layer 1 -->
-                                        <li>
-                                            <div class="info">
-                                                <h2>Honours Computer Science </h2>
-                                                <br>
-                                                <h3>Training the Future</h3>
-                                                <p>
-                                                    We as a class are studying the various computer science languages that help make the devices and applications we use everday. 
-                                                </p>
-                                            </div>
-                                            <img class="slider_img animate-in" src="assets\img\slides\sequence\book.png" alt="">
-                                        </li>
-                                        <!-- Layer 2 -->
-                                        <li>
-                                            <div class="info">
-                                                <h2>Implementing New Methods</h2>
-                                                <br>
-                                                <h3>Projects and Websites</h3>
-                                                <p>
-                                                    Our teaching method consists of various projects assigned over long periods of time. These projects include things liek website creation. 
-                                                </p>
-                                            </div>
-                                            <img class="slider_img animate-in" src="assets\img\slides\sequence\compsc.png" alt="">
-                                        </li>
-                                        <!-- Layer 3 -->
-                                        <li>
-                                            <div class="info">
-                                                <h2>Far from ugly</h2>
-                                                <br>
-                                                <h3>Latest technology</h3>
-                                                <p>
-                                                   We use high-level programming languages and in-depth learning to cover the concepts. 
-                                                </p>
-                                            </div>
-                                            <img class="slider_img animate-in"
-                                                 src="assets\img\slides\sequence\computer.jpg" alt="">
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="centered">
+                                <h3>Our Location</h3>
+                                <p>
+                                    We are based in The Bishop's School in La Jolla. 
+                                </p>
                             </div>
-                            <!-- Sequence Slider::END-->
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <ul class="breadcrumb notop">
+                            <li><a href="Home.html">Home</a><span class="divider">/</span></li>
+                            <li class="active">About detail</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -143,47 +130,38 @@
         <section id="maincontent">
             <div class="container">
                 <div class="row">
-                    <div class="span3 features">
-                        <h4>In depth Curriculum</h4>
-                        <div class="dotted_line">
-                        </div>
-                        <p class="left">
-                            In Honours Computer Science, we provide a plethora of the very best tools and skills needed to become heavily involved in the amazing world of computer science. 
-                        </p>
-
-                    </div>
-                    <div class="span3 features">
-                        <h4>Multiple Languages</h4>
-                        <div class="dotted_line">
-                        </div>
-                        <p class="left">
-                            In this course you will learn many different languages and skills. You will learn to code in HTML and CSS; as a result, you will know how to build a website. In addition you will learn Python one of the most used and most utilized languages in the field. 
-                        </p>
-
-                    </div>
-                    <div class="span3 features">
-                        <h4>Learn to work as a team</h4>
-                        <div class="dotted_line">
-                        </div>
-                        <p class="left">
-                            In addition, the teacher, Dr. Lewis, is well versed in CS and you will also get to collaborate with many other students that are just excited as you are. As a result, you will gain experience with working in a team to obtain a specific goal. 
-                        </p>
-
-                    </div>
-                    <div class="span3 features">
-                        <h4>State of the art computers and tools</h4>
-                        <div class="dotted_line">
-                        </div>
-                        <p class="left">
-                            We also have many state of the art tools used in various fields of computer science so that you can explore as many facets of this greatly interesting subject in detail.
-                        </p>
+                    <div class="span12">
+                        <table>
+                            <tr>
+                                <td class ='type1'>#1 </td>
+                                <td class ='type2'> Private High School in San Diego </td>
+                            </tr>
+                            <tr>
+                                <td class ='type1'>#1 </td>
+                                <td class = 'type2'> Christian High School in California </td>
+                            </tr>
+                            <tr>
+                                <td class ='type1'>#7 </td>
+                                <td class ='type2'> College Prep High School in California</td>
+                            </tr>
+                            <tr>
+                                <td class ='type1'>#13 </td>
+                                <td class ='type2'> High School in California</td>
+                            </tr>
+                        </table> 
+                        <article>
+                            <div class="row">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397.83488023257814!2d-117.27707439262835!3d32.84460311775351!2m3!1f180!2f39.35876599054822!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x80dc03e591f91ff9%3A0xcf474fe5b2d6411a!2sThe+Bishop%E2%80%99s+School!5e1!3m2!1sen!2sus!4v1536940045852" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </article>
+                        <!-- end article full post -->
                     </div>
                 </div>
             </div>
         </section>
         <!-- Footer
        ================================================== -->
-         <footer class="footer">
+        <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="span4">
@@ -192,8 +170,7 @@
                             <ul class="regular">
                                 <li><a href="Home.html">Home</a></li>
                                 <li><a href="login.php">Login</a></li>
-                                <li><a href="#">Other #1</a></li>
-                                <li><a href="#">Other #2</a></li>
+                                 <li><a href="YearLongSchedule.html">Schedule</a></li>
                             </ul>
                         </div>
                     </div>
@@ -231,5 +208,7 @@
         <!-- Template Custom JavaScript File -->
         <script src="assets/js/custom.js"></script>
 
+
     </body>
+
 </html>

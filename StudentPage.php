@@ -32,14 +32,31 @@
     </head>
 
     <body data-spy="scroll" data-target=".bs-docs-sidebar">
+                                <?php
+        
+                                session_start();
+                                $a = $_SESSION['login'];
+                                #echo $a.'____';
+                                if ( $a != 'true') { //if login in session is not set
+                                    header('Location: login.php');
+                                }
+//                            
+//                                print_r($_SESSION);
+                                session_destroy();
+//                                
+//                                $var = $_SESSION['login'];
+//                                echo $var; 
+//                                echo 'here';
+                                ?>
         <header>
             <!-- Navbar
             ================================================== -->
             <div class="navbar navbar-fixed-top">
                 <div class="navbar-inner">
                     <div class="container">
+                        <!-- logo -->
                         <a class="brand logo" href="index.html">
-                            <img src="assets/img/logo_copy.png" alt="" />
+                            <img src="assets/img/logo.png" alt="" />
                         </a>
                         <!-- end logo -->
                         <!-- top menu -->
@@ -61,9 +78,13 @@
                                     <li class="dropdown">
                                         <a href="#">Student Information</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="roster.html">Roster</a></li>
+                                            <li><a href="roster.html">Pricing table</a></li>
                                             <li><a href="login.php">Login</a></li>
+                                            <li><a href="404.html">404</a></li>
                                         </ul>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -81,10 +102,9 @@
                     <div class="row">
                         <div class="span12">
                             <div class="centered">
-                                <h3>About us</h3>
-                                <p>
-                                    Here is some general information about the creators of this webdite and the course. 
-                                </p>
+                                <h3>Student Information</h3>
+
+
                             </div>
                         </div>
                     </div>
@@ -97,7 +117,7 @@
                     <div class="span12">
                         <ul class="breadcrumb notop">
                             <li><a href="#">Home</a><span class="divider">/</span></li>
-                            <li class="active">About Us</li>
+                            <li class="active">Blog right sidebar</li>
                         </ul>
                     </div>
                 </div>
@@ -109,26 +129,12 @@
                     <div class="span4">
                         <div class="well">
                             <div class="centered">
-                                <img src="assets/img/jeffrey.jpg" alt = "Jeffrey" height = "300" width = "150" align = "centered">
-                                <h4>Jefferey Wang</h4>
+                                <i class="icon-circled icon-64 icon-suitcase active"></i>
+                                <h4>High integrity</h4>
                                 <div class="dotted_line">
                                 </div>
                                 <p>
-                                    The productivity manager and developer of the website. He worked with the PHP involved in the creation of the login page. 
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="span4">
-                        <div class="well">
-                            <div class="centered">
-                                <img src="assets/img/logo_copy.png" height = "150" width = "150">
-                                <h4>Website Description</h4>
-                                <div class="dotted_line">
-                                </div>
-                                <p>
-                                    This website offers an in depth look into the Honours Computer Science course that is offered at The Bishop'Sschool. Using this website, you can obtain informatiom about the course and all of the people involved in it.
+                                    Dolorem adipiscing definiebas ut nec. Dolore consectetuer eu vim, elit molestie ei has, petentium imperdiet in pri. Mel virtute efficiantur ne, zril omnes sed no, sit eu duis semper.
                                 </p>
                             </div>
                         </div>
@@ -136,12 +142,25 @@
                     <div class="span4">
                         <div class="well">
                             <div class="centered">
-                                <img src="assets/img/pranav.jpg" alt = "Pranav" height = "300" width = "150"align = "centered">
-                                <h4>Pranav Dhinakar</h4>
+                                <i class="icon-circled icon-64 icon-leaf active"></i>
+                                <h4>Following trends</h4>
                                 <div class="dotted_line">
                                 </div>
                                 <p>
-                                    Pranav worked with developing the aesthetics and website information. He was involved in researching and writing the information about the course and the website. He was also in charge of the website layout.
+                                    Dolorem adipiscing definiebas ut nec. Dolore consectetuer eu vim, elit molestie ei has, petentium imperdiet in pri. Mel virtute efficiantur ne, zril omnes sed no, sit eu duis semper.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="well">
+                            <div class="centered">
+                                <i class="icon-circled icon-64 icon-coffee active"></i>
+                                <h4>Have a solid team</h4>
+                                <div class="dotted_line">
+                                </div>
+                                <p>
+                                    Dolorem adipiscing definiebas ut nec. Dolore consectetuer eu vim, elit molestie ei has, petentium imperdiet in pri. Mel virtute efficiantur ne, zril omnes sed no, sit eu duis semper.
                                 </p>
                             </div>
                         </div>
@@ -155,36 +174,32 @@
                 </div>
                 <div class="row">
                     <div class="span12">
-                        <h4>More Information</h4>
+                        <h4>Our services</h4>
                         <!-- start: Accordion -->
                         <div class="accordion" id="accordion2">
                             <div class="accordion-group">
                                 <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                        <i class="icon-minus"></i> Course Description</a>
+                                    <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                        <i class="icon-minus"></i> Database management</a>
                                 </div>
                                 <div id="collapseOne" class="accordion-body collapse in">
                                     <div class="accordion-inner">
-                                        This year long course provides an overview of the role of a software engineer, different aspects of the profession, and the different kinds of programming that one would use for web development projects. Students will use HTML, processing, scripting languages and Python throughout the duration of the course as they learn about the various concepts and possibilities of design as it relates to the wearable arts, visual arts, front-end web and game development. In this programming course, students learn new tools and materials that are imperative to becoming a good programmer. A strong emphasis is placed on producing efficient, quality programming code when completing each assignment. Topics include analyzing data solely through computational means, applying software engineering techniques and processes and exploring current tech trends.
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                        raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-group">
                                 <div class="accordion-heading">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                                        <i class="icon-plus"></i>Objectives</a>
+                                        <i class="icon-plus"></i> UI development</a>
                                 </div>
                                 <div id="collapseTwo" class="accordion-body collapse">
                                     <div class="accordion-inner">
-                                        -Understand different roles needed in software development.<br/>
-                                        -Design, implement, debug and test components of a web-based solution.<br/>
-                                        -Become proficient in the use of Python.<br/>
-                                        -Use other tools and languages as necessary in developing a solution.<br/>
-                                        -Collaborate effectively in a group.<br/>
-                                        -Follow Ethical software development practices.<br/>
-                                        -Individual technical improvement.<br/>
-                                        -Architectural understanding of Web-based solutions.<br/>
-
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                        raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                     </div>
                                 </div>
                             </div>
@@ -195,7 +210,9 @@
                                 </div>
                                 <div id="collapseThree" class="accordion-body collapse">
                                     <div class="accordion-inner">
-                                        <h1><b>NO<b/></h1>
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                                        raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                     </div>
                                 </div>
                             </div>
@@ -216,13 +233,17 @@
                             <ul class="regular">
                                 <li><a href="Home.html">Home</a></li>
                                 <li><a href="login.php">Login</a></li>
-                                 <li><a href="YearLongSchedule.html">Schedule</a></li>
+                                <li><a href="#">Other #1</a></li>
+                                <li><a href="#">Other #2</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="span4">
                         <div class="widget">
                             <!-- logo -->
+                            <a class="brand logo" href="index.html">
+                                <img src="assets/img/logo.png" alt="" />
+                            </a>
                             <!-- end logo -->
                             <address>
                                 <strong>The Bishop's School</strong><br>
